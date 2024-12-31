@@ -1,0 +1,13 @@
+{
+  "item.stealeverything.limestone_powder": "石灰岩粉末",
+
+  "block.stealeverything.cement": "水泥",
+  "block.stealeverything.concrete": "混凝土",
+  "block.stealeverything.white_concrete": "白色混凝土",
+  "block.stealeverything.light_gray_concrete": "淡灰色混凝土",
+  "block.stealeverything.gray_concrete": "灰色混凝土",
+  "block.stealeverything.rebar_concrete": "钢筋混凝土",
+  "block.stealeverything.cinder_block": "空心砖",
+
+  "creativetab.steal_tab": "开偷"
+}

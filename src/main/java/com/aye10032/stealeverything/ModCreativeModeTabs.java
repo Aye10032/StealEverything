@@ -27,7 +27,14 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.steal_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(AllItems.LIMESTONE_POWDER.get());
+
                         pOutput.accept(AllBlocks.CEMENT.get());
+                        pOutput.accept(AllBlocks.CONCRETE.get());
+                        pOutput.accept(AllBlocks.WHITE_CONCRETE.get());
+                        pOutput.accept(AllBlocks.LIGHT_GRAY_CONCRETE.get());
+                        pOutput.accept(AllBlocks.GRAY_CONCRETE.get());
+                        pOutput.accept(AllBlocks.REBAR_CONCRETE.get());
+                        pOutput.accept(AllBlocks.CINDER_BLOCK.get());
                     })
                     .build()
     );

@@ -2,6 +2,12 @@
   "item.stealeverything.limestone_powder": "Limestone Powder",
 
   "block.stealeverything.cement": "Cement",
+  "block.stealeverything.concrete": "Concrete",
+  "block.stealeverything.white_concrete": "White Concrete",
+  "block.stealeverything.light_gray_concrete": "Light Gray Concrete",
+  "block.stealeverything.gray_concrete": "Gray Concrete",
+  "block.stealeverything.rebar_concrete": "Rebar Concrete",
+  "block.stealeverything.cinder_block": "Cinder Block",
 
   "creativetab.steal_tab": "Steal Tab"
 }

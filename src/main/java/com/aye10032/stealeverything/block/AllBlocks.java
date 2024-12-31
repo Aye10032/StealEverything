@@ -26,7 +26,31 @@ public class AllBlocks {
 
     public static final RegistryObject<Block> CEMENT = registryBlock(
             "cement",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CYAN_CONCRETE))
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND))
+    );
+    public static final RegistryObject<Block> CONCRETE = registryBlock(
+            "concrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE))
+    );
+    public static final RegistryObject<Block> WHITE_CONCRETE = registryBlock(
+            "white_concrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE))
+    );
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE = registryBlock(
+            "light_gray_concrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE))
+    );
+    public static final RegistryObject<Block> GRAY_CONCRETE = registryBlock(
+            "gray_concrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE))
+    );
+    public static final RegistryObject<Block> REBAR_CONCRETE = registryBlock(
+            "rebar_concrete",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS))
+    );
+    public static final RegistryObject<Block> CINDER_BLOCK = registryBlock(
+            "cinder_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS))
     );
 
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block) {

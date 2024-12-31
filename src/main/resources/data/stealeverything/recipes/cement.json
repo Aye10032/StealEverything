@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "stealeverything:limestone_powder"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "item": "stealeverything:cement"
+    }
+  ]
+}
