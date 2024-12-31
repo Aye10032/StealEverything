@@ -1,5 +1,6 @@
 package com.aye10032.stealeverything;
 
+import com.aye10032.stealeverything.block.AllBlocks;
 import com.aye10032.stealeverything.item.AllItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -26,6 +27,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.steal_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(AllItems.LIMESTONE_POWDER.get());
+                        pOutput.accept(AllBlocks.CEMENT.get());
                     })
                     .build()
     );

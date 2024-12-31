@@ -1,5 +1,6 @@
 package com.aye10032.stealeverything;
 
+import com.aye10032.stealeverything.block.AllBlocks;
 import com.aye10032.stealeverything.item.AllItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -28,9 +29,9 @@ public class StealEverything {
 
         ModCreativeModeTabs.register(modEventBus);
         AllItems.register(modEventBus);
+        AllBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
 
@@ -41,11 +42,8 @@ public class StealEverything {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-//        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-//            event.accept(AllItems.LIMESTONE_POWDER);
-//        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
