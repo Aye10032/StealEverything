@@ -26,6 +26,7 @@ public class StealEverything {
     public StealEverything(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
         AllItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -42,9 +43,9 @@ public class StealEverything {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(AllItems.LIMESTONE_POWDER);
-        }
+//        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+//            event.accept(AllItems.LIMESTONE_POWDER);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
