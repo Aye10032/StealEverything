@@ -3,6 +3,7 @@ package com.aye10032.stealeverything.datagen;
 import com.aye10032.stealeverything.StealEverything;
 import com.aye10032.stealeverything.block.AllBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -28,6 +29,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(AllBlocks.LIGHT_GRAY_CONCRETE);
         blockWithItem(AllBlocks.GRAY_CONCRETE);
         blockWithItem(AllBlocks.REBAR_CONCRETE);
+
+        simpleBlockWithItem(
+                AllBlocks.CINDER_BLOCK.get(),
+                models().cubeBottomTop(
+                        AllBlocks.CINDER_BLOCK.getId().getPath(),
+                        new ResourceLocation(StealEverything.MODID, "block/cinderblock"),
+                        new ResourceLocation(StealEverything.MODID, "block/cinderblock_top"),
+                        new ResourceLocation(StealEverything.MODID, "block/cinderblock_top")
+                )
+        );
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
