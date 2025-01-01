@@ -18,6 +18,11 @@ public class AllItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, StealEverything.MODID);
 
+    public  static  final RegistryObject<Item> CREATIVE_TAB_TFMG = ITEMS.register(
+            "icon_tfmg",
+            () -> new Item(new Item.Properties())
+    );
+
     public static final RegistryObject<Item> LIMESTONE_POWDER = ITEMS.register(
             "limestone_powder",
             () -> new Item(new Item.Properties())
