@@ -23,7 +23,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> STEAL_TAB = CREATIVE_MODE_TABS.register(
             "steal_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(AllItems.LIMESTONE_POWDER.get()))
+                    .icon(() -> new ItemStack(AllItems.CREATIVE_TAB_TFMG.get()))
                     .title(Component.translatable("creativetab.steal_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(AllItems.LIMESTONE_POWDER.get());
