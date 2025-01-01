@@ -1,9 +1,7 @@
 package com.aye10032.stealeverything.block;
 
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -23,17 +21,17 @@ public class StealBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(AllBlocks.CEMENT.get());
-        this.dropSelf(AllBlocks.CONCRETE.get());
-        this.dropSelf(AllBlocks.WHITE_CONCRETE.get());
-        this.dropSelf(AllBlocks.LIGHT_GRAY_CONCRETE.get());
-        this.dropSelf(AllBlocks.GRAY_CONCRETE.get());
-        this.dropSelf(AllBlocks.REBAR_CONCRETE.get());
-        this.dropSelf(AllBlocks.CINDER_BLOCK.get());
+        this.dropSelf(StealBlocks.CEMENT.get());
+        this.dropSelf(StealBlocks.CONCRETE.get());
+        this.dropSelf(StealBlocks.WHITE_CONCRETE.get());
+        this.dropSelf(StealBlocks.LIGHT_GRAY_CONCRETE.get());
+        this.dropSelf(StealBlocks.GRAY_CONCRETE.get());
+        this.dropSelf(StealBlocks.REBAR_CONCRETE.get());
+        this.dropSelf(StealBlocks.CINDER_BLOCK.get());
     }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return AllBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return StealBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }

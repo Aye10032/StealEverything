@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
  * @create: 2025-01-01 02:00
  **/
 
-public class AllItems {
+public class StealItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, StealEverything.MODID);
 

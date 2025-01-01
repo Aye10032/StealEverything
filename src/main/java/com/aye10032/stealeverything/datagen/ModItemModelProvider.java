@@ -1,7 +1,7 @@
 package com.aye10032.stealeverything.datagen;
 
 import com.aye10032.stealeverything.StealEverything;
-import com.aye10032.stealeverything.item.AllItems;
+import com.aye10032.stealeverything.item.StealItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -24,8 +24,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(AllItems.LIMESTONE_POWDER);
-        simpleItem(AllItems.CREATIVE_TAB_TFMG);
+        simpleItem(StealItems.LIMESTONE_POWDER);
+        simpleItem(StealItems.CREATIVE_TAB_TFMG);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

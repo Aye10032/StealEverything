@@ -1,7 +1,7 @@
 package com.aye10032.stealeverything.block;
 
 import com.aye10032.stealeverything.StealEverything;
-import com.aye10032.stealeverything.item.AllItems;
+import com.aye10032.stealeverything.item.StealItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -21,7 +21,7 @@ import java.util.function.Supplier;
  * @create: 2025-01-01 02:44
  **/
 
-public class AllBlocks {
+public class StealBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, StealEverything.MODID);
 
     public static final RegistryObject<Block> CEMENT = registryBlock(
@@ -60,7 +60,7 @@ public class AllBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registryBlockItem(String name, RegistryObject<T> block) {
-        return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return StealItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus bus) {

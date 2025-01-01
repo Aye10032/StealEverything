@@ -1,7 +1,7 @@
 package com.aye10032.stealeverything.datagen;
 
 import com.aye10032.stealeverything.StealEverything;
-import com.aye10032.stealeverything.block.AllBlocks;
+import com.aye10032.stealeverything.block.StealBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -30,14 +30,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
-                AllBlocks.CONCRETE.get(),
-                AllBlocks.WHITE_CONCRETE.get(),
-                AllBlocks.GRAY_CONCRETE.get(),
-                AllBlocks.LIGHT_GRAY_CONCRETE.get()
+                StealBlocks.CONCRETE.get(),
+                StealBlocks.WHITE_CONCRETE.get(),
+                StealBlocks.GRAY_CONCRETE.get(),
+                StealBlocks.LIGHT_GRAY_CONCRETE.get()
         );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
-                AllBlocks.REBAR_CONCRETE.get()
+                StealBlocks.REBAR_CONCRETE.get()
         );
     }
 }

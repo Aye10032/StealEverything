@@ -1,7 +1,7 @@
 package com.aye10032.stealeverything.datagen;
 
 import com.aye10032.stealeverything.StealEverything;
-import com.aye10032.stealeverything.block.AllBlocks;
+import com.aye10032.stealeverything.block.StealBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -23,17 +23,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(AllBlocks.CEMENT);
-        blockWithItem(AllBlocks.CONCRETE);
-        blockWithItem(AllBlocks.WHITE_CONCRETE);
-        blockWithItem(AllBlocks.LIGHT_GRAY_CONCRETE);
-        blockWithItem(AllBlocks.GRAY_CONCRETE);
-        blockWithItem(AllBlocks.REBAR_CONCRETE);
+        blockWithItem(StealBlocks.CEMENT);
+        blockWithItem(StealBlocks.CONCRETE);
+        blockWithItem(StealBlocks.WHITE_CONCRETE);
+        blockWithItem(StealBlocks.LIGHT_GRAY_CONCRETE);
+        blockWithItem(StealBlocks.GRAY_CONCRETE);
+        blockWithItem(StealBlocks.REBAR_CONCRETE);
 
         simpleBlockWithItem(
-                AllBlocks.CINDER_BLOCK.get(),
+                StealBlocks.CINDER_BLOCK.get(),
                 models().cubeBottomTop(
-                        AllBlocks.CINDER_BLOCK.getId().getPath(),
+                        StealBlocks.CINDER_BLOCK.getId().getPath(),
                         new ResourceLocation(StealEverything.MODID, "block/cinderblock"),
                         new ResourceLocation(StealEverything.MODID, "block/cinderblock_top"),
                         new ResourceLocation(StealEverything.MODID, "block/cinderblock_top")

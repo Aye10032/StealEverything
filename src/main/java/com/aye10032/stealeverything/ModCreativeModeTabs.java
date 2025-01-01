@@ -1,7 +1,7 @@
 package com.aye10032.stealeverything;
 
-import com.aye10032.stealeverything.block.AllBlocks;
-import com.aye10032.stealeverything.item.AllItems;
+import com.aye10032.stealeverything.block.StealBlocks;
+import com.aye10032.stealeverything.item.StealItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,18 +23,18 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> STEAL_TAB = CREATIVE_MODE_TABS.register(
             "steal_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(AllItems.CREATIVE_TAB_TFMG.get()))
+                    .icon(() -> new ItemStack(StealItems.CREATIVE_TAB_TFMG.get()))
                     .title(Component.translatable("creativetab.steal_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(AllItems.LIMESTONE_POWDER.get());
+                        pOutput.accept(StealItems.LIMESTONE_POWDER.get());
 
-                        pOutput.accept(AllBlocks.CEMENT.get());
-                        pOutput.accept(AllBlocks.CONCRETE.get());
-                        pOutput.accept(AllBlocks.WHITE_CONCRETE.get());
-                        pOutput.accept(AllBlocks.LIGHT_GRAY_CONCRETE.get());
-                        pOutput.accept(AllBlocks.GRAY_CONCRETE.get());
-                        pOutput.accept(AllBlocks.REBAR_CONCRETE.get());
-                        pOutput.accept(AllBlocks.CINDER_BLOCK.get());
+                        pOutput.accept(StealBlocks.CEMENT.get());
+                        pOutput.accept(StealBlocks.CONCRETE.get());
+                        pOutput.accept(StealBlocks.WHITE_CONCRETE.get());
+                        pOutput.accept(StealBlocks.LIGHT_GRAY_CONCRETE.get());
+                        pOutput.accept(StealBlocks.GRAY_CONCRETE.get());
+                        pOutput.accept(StealBlocks.REBAR_CONCRETE.get());
+                        pOutput.accept(StealBlocks.CINDER_BLOCK.get());
                     })
                     .build()
     );
