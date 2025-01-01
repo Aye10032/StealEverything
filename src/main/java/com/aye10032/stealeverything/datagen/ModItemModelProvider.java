@@ -25,6 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(AllItems.LIMESTONE_POWDER);
+        simpleItem(AllItems.CREATIVE_TAB_TFMG);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
