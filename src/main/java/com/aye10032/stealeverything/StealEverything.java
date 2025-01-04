@@ -3,6 +3,7 @@ package com.aye10032.stealeverything;
 import com.aye10032.stealeverything.block.StealBlocks;
 import com.aye10032.stealeverything.item.StealItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,11 +31,11 @@ public class StealEverything {
         StealItems.register(modEventBus);
         StealBlocks.register(modEventBus);
 
+        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

@@ -29,13 +29,27 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
+                StealBlocks.CEMENT.get()
+        );
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                StealBlocks.CONCRETE.get(),
+                StealBlocks.WHITE_CONCRETE.get(),
+                StealBlocks.GRAY_CONCRETE.get(),
+                StealBlocks.LIGHT_GRAY_CONCRETE.get(),
+                StealBlocks.REBAR_CONCRETE.get(),
+                StealBlocks.CINDER_BLOCK.get()
+        );
+
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(
+                StealBlocks.CINDER_BLOCK.get()
+        );
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
                 StealBlocks.CONCRETE.get(),
                 StealBlocks.WHITE_CONCRETE.get(),
                 StealBlocks.GRAY_CONCRETE.get(),
                 StealBlocks.LIGHT_GRAY_CONCRETE.get()
         );
-
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 StealBlocks.REBAR_CONCRETE.get()
         );
