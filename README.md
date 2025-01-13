@@ -1,2 +1,2 @@
 # StealEverythin MOD   
-![Java build](https://github.com/Aye10032/StealEverything/.github/workflows/gradle.yml/badge.svg)
+![Java build](https://github.com/Aye10032/StealEverything/actions/workflows/gradle.yml/badge.svg)
