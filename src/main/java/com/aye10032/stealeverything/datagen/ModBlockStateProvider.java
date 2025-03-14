@@ -34,9 +34,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 StealBlocks.CINDER_BLOCK.get(),
                 models().cubeBottomTop(
                         StealBlocks.CINDER_BLOCK.getId().getPath(),
-                        new ResourceLocation(StealEverything.MODID, "block/cinderblock"),
-                        new ResourceLocation(StealEverything.MODID, "block/cinderblock_top"),
-                        new ResourceLocation(StealEverything.MODID, "block/cinderblock_top")
+                        ResourceLocation.tryBuild(StealEverything.MODID, "block/cinderblock"),
+                        ResourceLocation.tryBuild(StealEverything.MODID, "block/cinderblock_top"),
+                        ResourceLocation.tryBuild(StealEverything.MODID, "block/cinderblock_top")
                 )
         );
     }
