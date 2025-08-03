@@ -1,13 +1,17 @@
 package com.aye10032.stealeverything;
 
-import com.aye10032.stealeverything.block.StealBlocks;
-import com.aye10032.stealeverything.item.StealItems;
+import com.aye10032.stealeverything.datagen.StealDataGen;
+import com.aye10032.stealeverything.registries.ModCreativeModeTabs;
+import com.aye10032.stealeverything.registries.SBlocks;
+import com.aye10032.stealeverything.registries.SItems;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -24,18 +28,23 @@ public class StealEverything {
     public static final String MODID = "stealeverything";
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(StealEverything.MODID);
+
     public StealEverything(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModCreativeModeTabs.register(modEventBus);
-        StealItems.register(modEventBus);
-        StealBlocks.register(modEventBus);
+        modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(EventPriority.LOWEST, StealDataGen::gatherData);
+
+        MinecraftForge.EVENT_BUS.register(this);
 
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-        modEventBus.addListener(this::commonSetup);
-        MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
+        ModCreativeModeTabs.register(modEventBus);
+        REGISTRATE.registerEventListeners(modEventBus);
+        SItems.register();
+        SBlocks.register();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -60,5 +69,9 @@ public class StealEverything {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
         }
+    }
+
+    public static ResourceLocation asResource(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 }

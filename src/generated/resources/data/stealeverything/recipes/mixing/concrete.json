@@ -26,17 +26,15 @@
       "item": "minecraft:gravel"
     },
     {
-      "item": "minecraft:iron_bars"
-    },
-    {
       "amount": 1000,
-      "fluid": "minecraft:water"
+      "fluid": "minecraft:water",
+      "nbt": {}
     }
   ],
   "results": [
     {
       "count": 8,
-      "item": "stealeverything:rebar_concrete"
+      "item": "stealeverything:concrete"
     }
   ]
 }

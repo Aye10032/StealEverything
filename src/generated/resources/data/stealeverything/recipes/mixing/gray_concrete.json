@@ -26,18 +26,18 @@
       "item": "minecraft:gravel"
     },
     {
-      "count": 1,
-      "item": "minecraft:light_gray_dye"
+      "item": "minecraft:gray_dye"
     },
     {
       "amount": 1000,
-      "fluid": "minecraft:water"
+      "fluid": "minecraft:water",
+      "nbt": {}
     }
   ],
   "results": [
     {
       "count": 8,
-      "item": "stealeverything:light_gray_concrete"
+      "item": "stealeverything:gray_concrete"
     }
   ]
 }
