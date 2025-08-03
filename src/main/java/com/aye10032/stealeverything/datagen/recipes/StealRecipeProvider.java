@@ -3,8 +3,11 @@ package com.aye10032.stealeverything.datagen.recipes;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
@@ -50,6 +53,34 @@ public class StealRecipeProvider extends RecipeProvider {
 
         public static ItemLike clayBall() {
             return Items.CLAY_BALL;
+        }
+
+        public static ItemLike sand() {
+            return Items.SAND;
+        }
+
+        public static ItemLike gravel() {
+            return Items.GRAVEL;
+        }
+
+        public static ItemLike grayDye() {
+            return Items.GRAY_DYE;
+        }
+
+        public static ItemLike lightGrayDye() {
+            return Items.LIGHT_GRAY_DYE;
+        }
+
+        public static ItemLike whiteDye() {
+            return Items.WHITE_DYE;
+        }
+
+        public static ItemLike ironBars(){
+            return Items.IRON_BARS;
+        }
+
+        public static Fluid water() {
+            return Fluids.WATER;
         }
     }
 }

@@ -2,10 +2,10 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "item": "stealeverything:limestone_powder"
+      "item": "minecraft:clay_ball"
     },
     {
-      "item": "minecraft:clay_ball"
+      "item": "stealeverything:limestone_powder"
     }
   ],
   "results": [
