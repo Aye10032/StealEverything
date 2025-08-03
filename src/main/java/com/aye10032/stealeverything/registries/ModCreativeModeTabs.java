@@ -1,7 +1,6 @@
-package com.aye10032.stealeverything.index;
+package com.aye10032.stealeverything.registries;
 
 import com.aye10032.stealeverything.StealEverything;
-import com.simibubi.create.AllCreativeModeTabs;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import it.unimi.dsi.fastutil.objects.ReferenceArrayList;
 import it.unimi.dsi.fastutil.objects.ReferenceLinkedOpenHashSet;
@@ -17,7 +16,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**

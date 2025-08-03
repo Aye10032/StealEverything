@@ -1,4 +1,4 @@
-package com.aye10032.stealeverything.index;
+package com.aye10032.stealeverything.registries;
 
 import com.aye10032.stealeverything.StealEverything;
 import com.tterrag.registrate.util.entry.BlockEntry;

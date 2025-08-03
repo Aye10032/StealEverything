@@ -1,10 +1,8 @@
-package com.aye10032.stealeverything.index;
+package com.aye10032.stealeverything.registries;
 
 import com.aye10032.stealeverything.StealEverything;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.RegistryObject;
 
 /**
  * @program: stealeverything

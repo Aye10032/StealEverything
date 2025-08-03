@@ -1,8 +1,9 @@
 package com.aye10032.stealeverything;
 
-import com.aye10032.stealeverything.index.ModCreativeModeTabs;
-import com.aye10032.stealeverything.index.SBlocks;
-import com.aye10032.stealeverything.index.SItems;
+import com.aye10032.stealeverything.datagen.StealDataGen;
+import com.aye10032.stealeverything.registries.ModCreativeModeTabs;
+import com.aye10032.stealeverything.registries.SBlocks;
+import com.aye10032.stealeverything.registries.SItems;
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
@@ -10,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,6 +35,7 @@ public class StealEverything {
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(EventPriority.LOWEST, StealDataGen::gatherData);
 
         MinecraftForge.EVENT_BUS.register(this);
 
